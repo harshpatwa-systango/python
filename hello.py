@@ -179,9 +179,9 @@ print("Factorial of 5:", factorial(5))
 
 # lambda function
 people = [
-    {'name': 'Alice', 'age': 30},
-    {'name': 'Bob', 'age': 25},
-    {'name': 'Charlie', 'age': 35}
+    {'name': 'hari', 'age': 30},
+    {'name': 'harsh', 'age': 25},
+    {'name': 'Patwa', 'age': 35}
 ]
 
 # Sort using a lambda function
