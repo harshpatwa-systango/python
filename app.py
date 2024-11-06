@@ -11,11 +11,11 @@ db = SQLAlchemy(app)
 
 # Define the Task model
 class Task(db.Model):
-    id = db.Column(db.Integer, primary_key=True, autoincrement=True)  # Corrected Integer
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)  
     title = db.Column(db.String(200), nullable=False)
-    done = db.Column(db.Boolean, default=False)  # Corrected Column spelling
+    done = db.Column(db.Boolean, default=False)  
 
-# Create tables if they don't exist (ideally, run this once, when setting up the app)
+# Create tables 
 with app.app_context():
     db.create_all()
 
@@ -33,7 +33,7 @@ def get_tasks():
 
 @app.route("/tasks", methods=['POST'])
 def create_task():
-    data = request.get_json()  # Now request is defined
+    data = request.get_json() 
     new_task = Task(title=data['title'], done=data['done'])
     db.session.add(new_task)
     db.session.commit()
